@@ -1,0 +1,12 @@
+{
+  "ernVersion": "0.43.0",
+  "jsApiImpls": [],
+  "miniApps": [
+    "/Users/asendar/Downloads/moviedetails-miniapp-master"
+  ],
+  "nativeDeps": [
+    "react-native@0.63.2",
+    "react-native-electrode-bridge@1.5.25"
+  ],
+  "platform": "android"
+}
