@@ -17,8 +17,9 @@
 package com.walmartlabs.ern.container;
 
 import com.azendoo.reactnativesnackbar.SnackbarPackage;
+import com.babisoft.ReactNativeLocalization.ReactNativeLocalizationPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
-import com.reactnativecommunity.webview.RNCWebViewPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.walmartlabs.electrode.reactnative.bridge.helpers.Logger;
 import com.walmartlabs.ern.container.devassist.ErnDevSettingsActivity;
@@ -159,9 +160,10 @@ public class ElectrodeReactContainer {
 
             sReactPackages.add(new MainReactPackage());
             sReactPackages.add(new SnackbarPackage());
+            sReactPackages.add(new RNGestureHandlerPackage());
             sReactPackages.add(new RNLocalizePackage());
+            sReactPackages.add(new ReactNativeLocalizationPackage());
             sReactPackages.add(new SafeAreaContextPackage());
-            sReactPackages.add(new RNCWebViewPackage());
             sReactPackages.add(new ColorMatrixImageFiltersPackage());
 
             sReactPackages.add(new SliderPlugin().hook(application, null));
