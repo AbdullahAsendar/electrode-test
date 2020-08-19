@@ -30,12 +30,12 @@ public class MiniAppsConfig {
     public static final HashMap<String, Class> MINIAPP_ACTIVITIES =
             new HashMap<String, Class>() {
                 {
-                    put(MiniApps.MovieDetailsMiniApp.getName(), MiniApps.MovieDetailsMiniApp.getActivityClass());
+                    put(MiniApps.programsdk.getName(), MiniApps.programsdk.getActivityClass());
                 }
             };
 
     public enum MiniApps {
-        MovieDetailsMiniApp("MovieDetailsMiniApp", MovieDetailsMiniAppActivity.class),
+        programsdk("programsdk", ProgramsdkActivity.class),
         ;
 
         private final String mMiniAppName;

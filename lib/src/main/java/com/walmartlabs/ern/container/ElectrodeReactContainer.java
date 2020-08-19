@@ -18,7 +18,12 @@ package com.walmartlabs.ern.container;
 
 import com.walmartlabs.electrode.reactnative.bridge.helpers.Logger;
 import com.walmartlabs.ern.container.devassist.ErnDevSettingsActivity;
+import com.walmartlabs.ern.container.plugins.SliderPlugin;
+import com.walmartlabs.ern.container.plugins.CameraPlugin;
 import com.walmartlabs.ern.container.plugins.FastImageViewPackagePlugin;
+import com.walmartlabs.ern.container.plugins.RNGestureHandlerPackagePlugin;
+import com.walmartlabs.ern.container.plugins.SvgPlugin;
+import com.walmartlabs.ern.container.plugins.VectorIconsPlugin;
 import com.walmartlabs.ern.container.plugins.BridgePlugin;
 
 import android.app.Activity;
@@ -28,6 +33,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.ern.api.impl.EnNavigationApiController;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -147,7 +153,12 @@ public class ElectrodeReactContainer {
             sElectrodeReactNativeHost = new ElectrodeReactNativeHost(application);
 
             sReactPackages.add(new MainReactPackage());
+            sReactPackages.add(new SliderPlugin().hook(application, null));
+            sReactPackages.add(new CameraPlugin().hook(application, null));
             sReactPackages.add(new FastImageViewPackagePlugin().hook(application, null));
+            sReactPackages.add(new RNGestureHandlerPackagePlugin().hook(application, null));
+            sReactPackages.add(new SvgPlugin().hook(application, null));
+            sReactPackages.add(new VectorIconsPlugin().hook(application, null));
             sReactPackages.add(new BridgePlugin().hook(application, null));
             sReactPackages.removeAll(Collections.singleton((ReactPackage) null));
 
@@ -169,6 +180,7 @@ public class ElectrodeReactContainer {
             // Load bundle now (engine might offer lazy loading later down the road)
             getReactInstanceManager().createReactContextInBackground();
 
+            EnNavigationApiController.register(null);
 
             Log.d(
                     TAG,

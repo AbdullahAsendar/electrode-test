@@ -2,11 +2,18 @@
   "ernVersion": "0.43.0",
   "jsApiImpls": [],
   "miniApps": [
-    "/Users/asendar/pc-mobile/program-sdk/moviedetails-miniapp-master"
+    "/Users/asendar/pc-mobile/program-sdk/programsdk"
   ],
   "nativeDeps": [
     "react-native@0.63.2",
+    "@react-native-community/slider@3.0.3",
+    "ernnavigation-api@1.3.0",
+    "ernnavigation-api-impl-native@1.4.18",
+    "react-native-camera@3.36.0",
     "react-native-fast-image@8.3.2",
+    "react-native-gesture-handler@1.7.0",
+    "react-native-svg@12.1.0",
+    "react-native-vector-icons@7.0.0",
     "react-native-electrode-bridge@1.5.25"
   ],
   "platform": "android"
