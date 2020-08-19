@@ -18,6 +18,7 @@ package com.walmartlabs.ern.container;
 
 import com.walmartlabs.electrode.reactnative.bridge.helpers.Logger;
 import com.walmartlabs.ern.container.devassist.ErnDevSettingsActivity;
+import com.walmartlabs.ern.container.plugins.FastImageViewPackagePlugin;
 import com.walmartlabs.ern.container.plugins.BridgePlugin;
 
 import android.app.Activity;
@@ -146,6 +147,7 @@ public class ElectrodeReactContainer {
             sElectrodeReactNativeHost = new ElectrodeReactNativeHost(application);
 
             sReactPackages.add(new MainReactPackage());
+            sReactPackages.add(new FastImageViewPackagePlugin().hook(application, null));
             sReactPackages.add(new BridgePlugin().hook(application, null));
             sReactPackages.removeAll(Collections.singleton((ReactPackage) null));
 
