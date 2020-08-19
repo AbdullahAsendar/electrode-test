@@ -11,7 +11,7 @@
     "ernnavigation-api-impl-native@1.4.18",
     "react-native-camera@3.36.0",
     "react-native-fast-image@8.3.2",
-    "react-native-gesture-handler@1.5.2",
+    "react-native-gesture-handler@1.4.1",
     "react-native-svg@12.1.0",
     "react-native-vector-icons@7.0.0",
     "react-native-electrode-bridge@1.5.25"
