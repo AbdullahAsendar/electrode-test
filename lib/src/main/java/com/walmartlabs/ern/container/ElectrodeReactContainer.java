@@ -160,7 +160,6 @@ public class ElectrodeReactContainer {
 
             sReactPackages.add(new MainReactPackage());
             sReactPackages.add(new SnackbarPackage());
-            sReactPackages.add(new RNGestureHandlerPackage());
             sReactPackages.add(new RNLocalizePackage());
             sReactPackages.add(new ReactNativeLocalizationPackage());
             sReactPackages.add(new SafeAreaContextPackage());
