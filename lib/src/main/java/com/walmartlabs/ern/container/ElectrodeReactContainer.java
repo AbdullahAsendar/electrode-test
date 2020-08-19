@@ -16,6 +16,10 @@
 
 package com.walmartlabs.ern.container;
 
+import com.azendoo.reactnativesnackbar.SnackbarPackage;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.walmartlabs.electrode.reactnative.bridge.helpers.Logger;
 import com.walmartlabs.ern.container.devassist.ErnDevSettingsActivity;
 import com.walmartlabs.ern.container.plugins.SliderPlugin;
@@ -51,6 +55,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import iyegoroff.RNColorMatrixImageFilters.ColorMatrixImageFiltersPackage;
 import okhttp3.OkHttpClient;
 
 public class ElectrodeReactContainer {
@@ -153,6 +158,12 @@ public class ElectrodeReactContainer {
             sElectrodeReactNativeHost = new ElectrodeReactNativeHost(application);
 
             sReactPackages.add(new MainReactPackage());
+            sReactPackages.add(new SnackbarPackage());
+            sReactPackages.add(new RNLocalizePackage());
+            sReactPackages.add(new SafeAreaContextPackage());
+            sReactPackages.add(new RNCWebViewPackage());
+            sReactPackages.add(new ColorMatrixImageFiltersPackage());
+
             sReactPackages.add(new SliderPlugin().hook(application, null));
             sReactPackages.add(new CameraPlugin().hook(application, null));
             sReactPackages.add(new FastImageViewPackagePlugin().hook(application, null));
