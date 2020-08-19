@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import com.facebook.react.modules.core.PermissionAwareActivity;
 import com.facebook.react.modules.core.PermissionListener;
 
-public abstract class PointCheckoutActivity extends com.walmartlabs.ern.container.miniapps.ProgramsdkActivity implements PermissionAwareActivity {
+public class PointCheckoutActivity extends com.walmartlabs.ern.container.miniapps.ProgramsdkActivity implements PermissionAwareActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
